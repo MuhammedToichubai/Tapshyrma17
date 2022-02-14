@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Arrays;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -39,12 +41,13 @@ public class Main {
                     }
                     System.out.println();
                 }
-                Animal[] reptile = {animals[0]};
-                Animal[] fish = {animals[1]};
-                Animal[] bird = {animals[2]};
-        for (Animal animal:animals) {
-            System.out.println(animal);
-        }
+                //for (Animal animal:animals) {System.out.println(animal);}
+                Animal[] fish = {animals[0]};
+                Animal[] bird = {animals[1]};
+                Animal[] reptile = {animals[2]};
+        System.out.println("Fish -\n "+ Arrays.toString(fish)+"\nBird - \n"+Arrays.toString(bird)+"\nReptile - \n"+
+                             Arrays.toString(reptile));
+
 
         }
 }
