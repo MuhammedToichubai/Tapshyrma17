@@ -14,18 +14,15 @@ public class Main {
 //                Ар бир объект учун оз озунчо массив тузуп Animal массивиндеги жаныбарларды
 //        болуп оз озунун массивине салыныз
 
-                Animal shark = new Shark(777.7,"Blue",true);
-                Animal eagle = new Eagle(10.2,"Brown",180);
-                Animal turtle = new Turtle(25.12,"Green",150);
-
-                Animal[] animals = {turtle, eagle, shark};
+        Animal[] animals = {new Shark(777.7,"Blue",true),
+                            new Eagle(10.2,"Brown",180),new Turtle(25.12,"Green",150)};
 
                 for (Animal s : animals) {
                     if (s instanceof Shark) {
-                        ((Shark) s).attack();
+                      ((Shark) s).attack();
                     }
                     if (s.getClass().getName().equals("tapshyrma17.Shark")) {
-                        ((Shark) s).attack();
+                       ((Shark) s).attack();
                     }
 
                     if (s instanceof Turtle) {
@@ -42,9 +39,12 @@ public class Main {
                     }
                     System.out.println();
                 }
-                Animal[] reptile = {turtle};
-                Animal[] fish = {shark};
-                Animal[] bird = {eagle};
+                Animal[] reptile = {animals[0]};
+                Animal[] fish = {animals[1]};
+                Animal[] bird = {animals[2]};
+        for (Animal animal:animals) {
+            System.out.println(animal);
+        }
 
         }
 }

@@ -31,8 +31,8 @@ public class Turtle extends Animal{
 
     @Override
     public String toString() {
-        return "Turtle information: " +'\n'+
-                "age=" + age +'\n'+
+        return "Turtle : " +'\n'+
+                "age : " + age +'\n'+
                 super.toString();
     }
 }
