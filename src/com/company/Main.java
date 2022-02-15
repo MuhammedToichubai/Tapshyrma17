@@ -16,37 +16,49 @@ public class Main {
 //                Ар бир объект учун оз озунчо массив тузуп Animal массивиндеги жаныбарларды
 //        болуп оз озунун массивине салыныз
 
-        Animal[] animals = {new Shark(777.7,"Blue",true),
-                            new Eagle(10.2,"Brown",180),new Turtle(25.12,"Green",150)};
 
-                for (Animal s : animals) {
-                    if (s instanceof Shark) {
-                      ((Shark) s).attack();
-                    }
-                    if (s.getClass().getName().equals("tapshyrma17.Shark")) {
-                       ((Shark) s).attack();
-                    }
+        Animal shark = new Shark(777.7,"Blue",true);
+        Animal eagle = new Eagle(10.2,"Brown",180);
+        Animal turtle = new Turtle(25.12,"Green",150);
 
-                    if (s instanceof Turtle) {
-                        ((Turtle) s).swim();
+        Animal[] animals ={shark,eagle,turtle};
+
+        Shark[] fish = new Shark[1];
+        Eagle[] bird = new Eagle[4];
+        Turtle[] reptile = new Turtle[3];
+        int d = 0;
+                for (Animal animal : animals) {
+                    if (animal instanceof Shark) {
+                      ((Shark) animal).attack();
+                      fish[d] = (Shark) animal;
+                      d++;
                     }
-                    if (s.getClass().getName().equals("tapshyrma17.Turtle")) {
-                        ((Turtle) s).swim();
+                    if (animal.getClass().getName().equals("tapshyrma17.Shark")) {
+                       ((Shark) animal).attack();
                     }
-                    if (s instanceof Eagle) {
-                        ((Eagle) s).fly();
+                    if (animal instanceof Eagle) {
+                        ((Eagle) animal).fly();
+                        bird[d] = (Eagle) animal;
+                        d++;
                     }
-                    if (s.getClass().getName().equals("tapshyrma17.Eagle")) {
-                        ((Eagle) s).fly();
+                    if (animal.getClass().getName().equals("tapshyrma17.Eagle")) {
+                        ((Eagle) animal).fly();
+
                     }
-                    System.out.println();
+                    if (animal instanceof Turtle) {
+                        ((Turtle) animal).swim();
+                        reptile[d] = (Turtle) animal;
+                        d++;
+                    }
+                    if (animal.getClass().getName().equals("tapshyrma17.Turtle")) {
+                        ((Turtle) animal).swim();
+                    }
                 }
-                //for (Animal animal:animals) {System.out.println(animal);}
-                Animal[] fish = {animals[0]};
-                Animal[] bird = {animals[1]};
-                Animal[] reptile = {animals[2]};
-        System.out.println("Fish -\n "+ Arrays.toString(fish)+"\nBird - \n"+Arrays.toString(bird)+"\nReptile - \n"+
-                             Arrays.toString(reptile));
+
+
+
+
+
 
 
         }
